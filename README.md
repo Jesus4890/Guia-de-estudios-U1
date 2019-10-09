@@ -22,6 +22,8 @@ Las interfaces tiene muchos tipos de aplicaciones, entre ellas la generalicacion
  
 La generalicacion se refiere a la construccion de un prototipo que muchas cosas pueden seguir. Viendolo desde el punto de vista de POO, se define como la creacion de clases apartir una clase ya definida, en este caso, una interfaz. 
 
+En palabras simples, si tenemos dos clases que son goku y vegeta que son sayayines, en vez darle sus atributos a cada una, creamos una interfaz llamada sayayin para poner ahi los atrubutos que tiene en comun para hacerlo mas eficiente.
+
 
 ---
 Clases abstractas.
