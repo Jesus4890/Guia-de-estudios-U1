@@ -132,4 +132,24 @@ Para referinos a una clase interna especifica usamos .this lo que nos permite ap
 ---
 Colision de nombres.
 ---
+Esto succede cuando estamos intendo generalizar mediante interfaces ya que podemos tener el caso que una clase concreta implemente dos interfaces de lo que se esta intentando generalizar. Por ejemplo, Gohan es mitad humano y mitad ss por lo tanto, si tenemos dos interfaces llamada sayayin y humano que contiene el metodo Origen() y se implementan a Gohan habria un error ya que Gohan intenta implementar dos metodos que se llaman igual lo cual causaria la colison de nombre.
 
+Una solucion que yo encontre a ese problema fue ir un poco mas lejos en la generalizacion y crear una clase abstracta con los rasgo que gohan tendra, en este caso el origen y dejar en sayayin y humano solo metodos que sean exclusivos de su interfaz.
+
+```
+public class Gohan implements A,D {
+
+    @Override
+    public void Origen() {
+        
+    }
+}
+public interface D {
+
+    public void Origen();
+}
+public interface A {
+   public void Origen();
+}
+
+```
