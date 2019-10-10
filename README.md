@@ -153,3 +153,17 @@ public interface A {
 }
 
 ```
+---
+Genericidad.
+---
+Es un mecanismo que permite crear clases, subprogramas, interfaces o paquetes que puedan aceptar todo tipo de datos que se le ponga enfrente.
+
+```
+ public class ArrayList<E> extends AbstractList<E>
+   public E  get(int index) {
+       rangeCheck(index);
+       return elementData(index);
+   }
+ }
+
+```
