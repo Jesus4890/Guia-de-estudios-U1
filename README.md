@@ -85,7 +85,51 @@ public abstract class E {
     }
 }
 ```
+---
+Clases anidadas
+---
+Son usadas las clases anidadas cuando no se requiere de una conexion de los objetos de la clase externa e interna. Por lo tanto, podemos declarár interna como static. Una cosa a resaltar es que la clase externa es quien contiene los atributos y metodos a utilizar.
 
+```
+public class B  implements A, D {
+    private static class F{
+        
+    }
 
+}
+```
+Se puede crear clases anidadas dentro de interfaces pero esto provocará que se ambas clases sean publicas y static.
+```
+public interface A {
+    void MyA();
+    public  class test{
+        public static class inter{
 
+        }
+    }
+}
+```
+---
+Clases internas
+---
+Tienen acceso a todos los miembros de su clase externa y pueden referirse a ellos directamente de la misma manera que otros miembros no estáticos del exterior de la clase.
+
+```
+public class C {
+  
+    class G{
+        
+    }
+    class H{
+        
+    }
+}
+```
+Cuando queremos crear una instancia con los metodo de clase interna podemos referinos a la clase externa para logarlo ya que al crear la clase interna a su vez creamos una conexion con los metodos de la clase externa por lo tanto, la externa puede llamar a los metodos de la interna.
+
+Para referinos a una clase interna especifica usamos .this lo que nos permite apuntar, por asi decirlo, a metodo de la interna.
+
+---
+Colision de nombres.
+---
 
